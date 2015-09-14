@@ -21,7 +21,7 @@ $(function(){
 	});
 //take chat messages broadcast from server and render them///
 	socket.on('chat message', function(msg){
-		$('#messages').prepend($('<li>').html(msg));
+		$('#messages').prepend($('<li>').text(msg));
 		var ding = new Audio('static/tim_tum.mp3');
 		ding.volume = 0.75;
 		ding.play();
